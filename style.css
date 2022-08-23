@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body nav {
+    width: 100%;
+    height: auto;
+    background-color: blueviolet;
+    color: white;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: monospace;
+}
+
+body nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+body nav ul li {
+    margin: 10px 20px;
+}
+
+body nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+}
+
+body nav ul li a:hover {
+    background-color: white;
+    color: blueviolet;
+}
+
+.nav-mobile {
+    display: none;
+}
+
+.sidebar {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: blueviolet;
+    z-index: 99999;
+    padding: 10px;
+    animation: move 0.5s;
+
+}
+
+.sidebar .header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sidebar .header a {
+    text-decoration: none;
+    color: white;
+    padding: 15px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    margin: 20px 0;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+body main {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-top: 100px;
+}
+
+.go {
+    text-decoration: none;
+    padding: 10px;
+    background-color: blueviolet;
+    color: white;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+.home {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 100px;
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    background-color: blueviolet;
+    text-align: center;
+    color: white;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    font-size: 14px;
+    box-shadow: -10px 5px 5px grey;
+}
+
+.start {
+    color: white;
+
+}
+
+/* animasi */
+@keyframes move {
+    from {
+        left: 100%;
+    }
+    to {
+        left: 0%;
+    }
+  }
+
+
+
+/* resvonsive */
+@media screen and (max-width:800px) {
+    .nav-desktop {
+        display: none;
+    }
+
+    .nav-mobile {
+        display: flex;
+        width: 100%;
+        height: auto;
+        background-color: blueviolet;
+        color: white;
+        padding: 5px;
+        justify-content: space-around;
+    }
+
+    .nav-mobile a {
+        text-decoration: none;
+        color: white;
+        padding: 5px;
+    }
+
+    .nav-mobile a:hover {
+        background-color: white;
+        color: blueviolet;
+    }
+
+    .home {
+        display: block;
+        margin-top: 40px;
+    }
+    .box {
+        margin: auto;
+        margin-bottom: 20px;
+    }
+
+
+}
